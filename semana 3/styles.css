@@ -1,0 +1,67 @@
+/* Quitamos márgenes por defecto del navegador */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* CONTENEDOR GRID */
+.container {
+    display: grid; /* Activamos GRID */
+
+    /* Definimos 3 columnas iguales */
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /* Definimos 3 filas */
+    grid-template-rows: 100px 200px 100px;
+
+    /* Espacio entre elementos */
+    gap: 10px;
+
+    padding: 10px;
+}
+
+/* HEADER */
+/* Ocupa desde columna 1 hasta la 4 (3 columnas) */
+.header {
+    background-color: lightblue;
+
+    grid-column: 1 / 4; /* ocupa las 3 columnas */
+    grid-row: 1;        /* primera fila */
+
+    text-align: center;
+    padding: 20px;
+}
+
+/* SIDEBAR */
+/* Ocupa 1 columna y 2 filas */
+.sidebar {
+    background-color: lightgreen;
+
+    grid-column: 1;      /* primera columna */
+    grid-row: 2 / 4;     /* ocupa fila 2 y 3 */
+
+    padding: 20px;
+}
+
+/* MAIN CONTENT */
+/* Ocupa 2 columnas y 2 filas */
+.main {
+    background-color: lightcoral;
+
+    grid-column: 2 / 4; /* columnas 2 y 3 */
+    grid-row: 2 / 4;    /* filas 2 y 3 */
+
+    padding: 20px;
+}
+
+/* FOOTER */
+/* Ocupa las 3 columnas */
+.footer {
+    background-color: lightgray;
+
+    grid-column: 1 / 4; /* todas las columnas */
+    grid-row: 4;        /* última fila */
+
+    text-align: center;
+    padding: 20px;
+}
